@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Navigation with Dropdown</title>
+    <style>
+      /* Sidebar container */
+      #sidebar {
+        width: 250px;
+        height: 100vh;
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        box-sizing: border-box;
+        position: fixed;
+        overflow: auto;
+      }
+
+      /* Sidebar heading */
+      #sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Sidebar links */
+      #sidebar a {
+        display: block;
+        padding: 12px;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      /* Hover effect on links */
+      #sidebar a:hover {
+        background-color: #575757;
+      }
+
+      /* Dropdown container */
+      /* .dropdown {
+          margin-bottom: 15px;
+        } */
+
+      /* Dropdown button */
+      .dropdown-btn {
+        display: block;
+        color: white;
+        cursor: pointer;
+        padding: 12px;
+        text-decoration: none;
+      }
+
+      /* Dropdown content (hidden by default) */
+      .dropdown-content {
+        display: none;
+        padding-left: 20px;
+      }
+
+      /* Dropdown content links */
+      .dropdown-content a {
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+        color: white;
+      }
+
+      /* Show dropdown on hover */
+      .dropdown-content a:hover {
+        background-color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sidebar">
+      <h2>Navigation</h2>
+      <!-- <a href="#">Home</a> -->
+
+      <!-- Category 1 with Dropdown -->
+      <div class="dropdown">
+        <a
+          href="javascript:void(0)"
+          class="dropdown-btn"
+          onclick="toggleDropdown('category1')"
+          >Ornamental &#9662;</a
+        >
+        <div id="category1" class="dropdown-content">
+          <a href="#">Flower</a>
+          <a href="#">Shrubs</a>
+          <a href="#">Trees</a>
+          <a href="#">Vines</a>
+          <a href="#">Succulents and Cacti</a>
+        </div>
+      </div>
+
+      <!-- Category 2 with Dropdown -->
+      <div class="dropdown">
+        <a
+          href="javascript:void(0)"
+          class="dropdown-btn"
+          onclick="toggleDropdown('category2')"
+          >Edible Plants &#9662;</a
+        >
+        <div id="category2" class="dropdown-content">
+          <a href="#">Vegetables</a>
+          <a href="#">Fruits</a>
+          <a href="#">Herbs</a>
+          <a href="#">Grains</a>
+        </div>
+      </div>
+      <!-- Category 3 with Dropdown -->
+      <div class="dropdown">
+        <a
+          href="javascript:void(0)"
+          class="dropdown-btn"
+          onclick="toggleDropdown('category3')"
+          >Specialized Plants &#9662;</a
+        >
+        <div id="category3" class="dropdown-content">
+          <a href="#">Native Plants</a>
+          <a href="#">Drought Tolerant Plants</a>
+          <a href="#">Shade Plants</a>
+          <a href="#">Acquatic Plants</a>
+          <a href="#">Medicinal Plants</a>
+        </div>
+      </div>
+      <!-- Category 4 with Dropdown -->
+      <div class="dropdown">
+        <a
+          href="javascript:void(0)"
+          class="dropdown-btn"
+          onclick="toggleDropdown('category4')"
+          >Plant Types by Growth Habit &#9662;</a
+        >
+        <div id="category4" class="dropdown-content">
+          <a href="#">Annuals</a>
+          <a href="#">Perennials</a>
+          <a href="#">Biennials</a>
+          <a href="#">Evergreen</a>
+          <a href="#">Deciduous</a>
+        </div>
+      </div>
+      <!-- Category 5 with Dropdown -->
+      <div class="dropdown">
+        <a
+          href="javascript:void(0)"
+          class="dropdown-btn"
+          onclick="toggleDropdown('category5')"
+          >Plant Categories By Climate &#9662;</a
+        >
+        <div id="category5" class="dropdown-content">
+          <a href="#">Tropical Plants</a>
+          <a href="#">Subtropical Plants</a>
+          <a href="#">Temperate Plants</a>
+          <a href="#">Arctic/Alpine Plants</a>
+          <a href="#">Desert Plants</a>
+        </div>
+      </div>
+      <!-- Category 6 with Dropdown -->
+      <div class="dropdown">
+        <a
+          href="javascript:void(0)"
+          class="dropdown-btn"
+          onclick="toggleDropdown('category6')"
+          >Category 6 &#9662;</a
+        >
+        <div id="category6" class="dropdown-content">
+          <a href="#">Companion Plants</a>
+          <a href="#">pollinator plants</a>
+          <a href="#">Fragrant Plants</a>
+          <a href="#">Color-themed plants</a>
+          <a href="#">Ground covers plants</a>
+        </div>
+      </div>
+
+      <!-- Other Links
+        <a href="#">About</a>
+        <a href="#">Contact</a> -->
+    </div>
+    <script>
+      function toggleDropdown(category) {
+        var dropdown = document.getElementById(category);
+        if (dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+        } else {
+          dropdown.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
