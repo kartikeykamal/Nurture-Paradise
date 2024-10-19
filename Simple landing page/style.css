@@ -1,0 +1,410 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("image.jpg"); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center;
+   /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Keeps the image fixed in place while scrolling */
+  min-height: 100vh; /* Ensures the body takes up at least the full height of the viewport */
+  color: white; /* Set default text color to ensure legibility */
+}
+
+/* Optionally, for extra compatibility */
+html {
+  height: 100%; /* Ensures the background covers the full height of the page */
+}
+/* Main Header Styling */
+header {
+  width: 100%;
+  max-width: 100%;
+  height: 60px; /* Adjusted for symmetry */
+  background-color: #4f6f52; /* Light grey background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* Center content for symmetry */
+  align-items: center; /* Align items vertically */
+}
+
+/* Container for the list */
+.headul {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Vertically center items */
+  width: 80%; /* Centralize the content by adjusting width */
+  margin: 0;
+  padding: 0;
+}
+
+/* List Item Styling */
+li {
+  list-style: none;
+}
+
+/* Link Styling */
+a {
+  text-decoration: none;
+  color: #ACE1AF; /* Dark grey for links */
+  font-size: 16px;
+  padding: 12px 20px; /* Symmetrical padding for better click area */
+  font-family: 'Helvetica', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Active Link Styling */
+header ul li a:active {
+  background-color: #9ADE7B; /* Slightly darker grey for active state */
+  border-radius: 5px;
+}
+
+/* Hover Effect */
+header ul li a:hover {
+  background-color: #808080; /* Darker grey on hover */
+  color: white; /* White text on hover */
+  border-radius: 5px;
+}
+
+/* Icon Styling */
+.fa-solid {
+  font-size: 18px;
+  color: #000000; /* Mid-tone grey for icons */
+}
+
+/* Icon containers (first and last) */
+li:first-child a i,
+li:last-child a i {
+  padding: 10px;
+  background-color: #dcdcdc; /* Lighter grey background for icons */
+  border-radius: 50%; /* Circular background */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Icon hover effect */
+li:first-child a:hover i,
+li:last-child a:hover i {
+  background-color: #808080; /* Dark grey on hover */
+  color: white;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Responsive: Adjust for smaller screens */
+@media (max-width: 768px) {
+  .headul{
+    width: 95%;
+  }
+}
+
+/* Flex container for layout */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 80vw;
+  max-height: 75vh;
+  flex-direction: column;
+  height: 810px;
+  margin: 15vh 10vh 10vw 10vw;
+}
+
+/* Common styles for flex items */
+.flex-item {
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 47%;
+  margin: 5.5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: cover; /* For background images */
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect for all flex items */
+.flex-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+}
+
+/* Add a dark overlay for better text readability when using background images */
+.flex-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  z-index: 1;
+  border-radius: 10px; /* Overlay respects border radius */
+}
+
+/* Ensure text is above the background and overlay */
+.flex-item span {
+  position: relative;
+  z-index: 2;
+  color: white; /* White text for better contrast */
+}
+
+/* Large item now styled like the small items */
+.large-item {
+  width: 30%;  /* Same width as small items */
+  height: 47%; /* Same height as small items */
+  margin: 5.5px 0;
+}
+
+/* Remove the button from the large item */
+.large-item a {
+  display: none;
+}
+
+/* Background images for the items */
+.flex-item:nth-child(1) {
+  background-image: url('plant1.jpeg'); /* Replace with your image */
+}
+
+.flex-item:nth-child(2) {
+  background-image: url('plant2.jpeg'); /* Replace with your image */
+}
+
+.flex-item:nth-child(3) {
+  background-image: url('plant3.jpeg'); /* Replace with your image */
+}
+
+.flex-item:nth-child(4) {
+  background-image: url('plant4.jpeg'); /* Replace with your image */
+}
+
+.flex-item:nth-child(5) {
+  background-image: url('plant5.jpeg'); /* Replace with your image */
+}
+.flex-item:nth-child(6) {
+  background-image: url('plant6.jpeg'); /* Replace with your image */
+}
+
+
+/* Section container */
+.abtus {
+  background-color: #2f2f2f; /* Dark gray for a modern look */
+  height: 70vh;
+  margin-top: 15vh;
+  padding: 0;
+  display: flex;
+  justify-content: space-between; /* Keep elements evenly spaced */
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  padding: 0 10vw; /* Add side padding for better spacing */
+  color: #ddd; /* Light gray text for better contrast */
+  border-radius: 10px; /* Smooth rounded corners */
+}
+
+/* Image box */
+#img {
+  height: 40vh;
+  width: 40vh;
+  background-color: bisque; /* Soft light background */
+  border-radius: 50%; /* Make the image a perfect circle */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* In case you add an image later */
+  background-size: cover; /* To cover the entire div with an image */
+}
+
+/* Text content box */
+#aboutus {
+  height: 55vh;
+  width: 45vw;
+  padding: 20px;
+  position: relative;
+  background-color: #3e3e3e; /* Slightly lighter gray than the background */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+}
+
+/* Main heading */
+#aboutus h3 {
+  color: #ffeb3b; /* Golden yellow for emphasis */
+  margin-bottom: 15px;
+  font-size: 1.8rem; /* Larger font size for readability */
+}
+
+/* Text paragraph */
+#explain {
+  margin-top: 15px;
+  line-height: 1.6; /* Better readability with larger line height */
+  font-size: 1rem;
+  color: #bbb; /* Softer gray for paragraph text */
+  text-align: justify; /* Justify the text for a cleaner look */
+}
+
+/* Call-to-action button */
+.abtus-item a {
+  text-decoration: none;
+  background-color: #ff5722; /* A warm, contrasting orange button */
+  color: white;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.abtus-item a:hover {
+  background-color: #e64a19; /* Darker shade of orange on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .abtus {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: center;
+    padding: 0 5vw;
+    height: auto;
+  }
+
+  #aboutus {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  #img {
+    height: 35vh;
+    width: 35vh;
+  }
+}
+
+
+/* 
+
+footer
+
+*/
+
+/* Main footer container */
+.mainfoot {
+  margin-top: 50px;
+  border-top: 3px solid #555; /* Softer grey for border */
+  background-color: #2c2c2c; /* Dark grey background */
+  color: #ddd; /* Light grey text */
+  display: flex;
+  padding: 0vw 9vw;
+  padding-top: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+/* Individual columns in the footer */
+.normal {
+  padding: 25px 0;
+  height: auto; /* Remove fixed height for better flexibility */
+  width: 20vw;
+  flex-grow: 1; /* Ensures flexibility while maintaining size */
+  min-width: 180px; /* Set a minimum width to avoid overcrowding */
+  margin-bottom: 20px;
+}
+
+/* Footer headings */
+footer div div h3 {
+  color: #ffeb3b; /* Golden shade for headings */
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+/* Unordered lists inside the footer */
+.footul {
+  margin: 20px 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.footul li {
+  padding-bottom: 10px;
+  color: #bbb; /* Lighter grey for list items */
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for footer list items */
+.footul li:hover {
+  color: #fff; /* Change to white on hover */
+}
+
+/* Bottom section of the footer */
+.botdiv {
+  border-top: 2px solid #444; /* Darker grey for bottom border */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 4.7vw;
+  background-color: #1e1e1e; /* Even darker grey for the bottom section */
+  color: #888; /* Lighter grey text */
+  font-size: 0.9rem;
+}
+
+/* Inline list in the bottom section */
+.botline {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 30vw;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.botline li {
+  margin-left: 15px;
+  color: #bbb; /* Lighter grey text */
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for bottom links */
+.botline li:hover {
+  color: #fff; /* White text on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mainfoot {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+    padding: 0 5vw;
+  }
+
+  .normal {
+    width: 100%; /* Full width for smaller screens */
+    text-align: center;
+  }
+
+  .botdiv {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .botline {
+    width: 100%; /* Full width for smaller screens */
+    justify-content: center;
+  }
+}
+
