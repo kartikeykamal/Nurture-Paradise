@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    background-color: #26a69a;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Centered Plant Container */
+.plant-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 50px; /* Added gap above the plant image */
+    margin-bottom: 30px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.plant-img {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plant-img:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Key Points Animation and Positioning */
+.point {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 15px;
+    width: 160px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.point:hover {
+    transform: scale(1.1);
+    background-color: #b2ebf2;
+}
+
+/* Adjusted Positioning for Symmetry */
+.top-left {
+    top: 10px;
+    left: -180px;
+}
+
+.top-right {
+    top: 10px;
+    right: -180px;
+}
+
+.bottom-left {
+    bottom: 10px;
+    left: -180px;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: -180px;
+}
+
+.center-top {
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Steps Section */
+.steps {
+    margin-top: 30px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.steps h2 {
+    margin-bottom: 10px;
+}
+
+.steps ol {
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+    list-style: none;
+    padding: 0;
+}
+
+.steps ol li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #e0f2f1;
+    border-radius: 8px;
+}
+
+/* Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: slideIn 0.5s ease-out;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(100px); }
+    to { transform: translateY(0); }
+}

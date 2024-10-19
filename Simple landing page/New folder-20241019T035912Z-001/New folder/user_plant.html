@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Plants Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .form-container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Plants Management</h1>
+
+    <!-- Form for adding new plant -->
+    <div class="form-container">
+        <h2>Add New Plant</h2>
+        <form id="plantForm">
+            <label for="userId">User ID</label>
+            <input type="number" id="userId" name="userId" required>
+
+            <label for="plantId">Plant ID</label>
+            <input type="number" id="plantId" name="plantId" required>
+
+            <label for="plantingDate">Planting Date</label>
+            <input type="date" id="plantingDate" name="plantingDate" required>
+
+            <label for="growthStatus">Growth Status</label>
+            <select id="growthStatus" name="growthStatus" required>
+                <option value="Growing">Growing</option>
+                <option value="Harvested">Harvested</option>
+                <option value="Dead">Dead</option>
+            </select>
+
+            <label for="season">Season</label>
+            <input type="text" id="season" name="season" required>
+
+            <label for="locationSpecific">Location Specific</label>
+            <input type="text" id="locationSpecific" name="locationSpecific" required>
+
+            <button type="submit">Add Plant</button>
+        </form>
+    </div>
+
+    <!-- User Plants Table -->
+    <table id="userPlantsTable">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Plant ID</th>
+                <th>Planting Date</th>
+                <th>Growth Status</th>
+                <th>Season</th>
+                <th>Location Specific</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be added dynamically -->
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById('plantForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+
+            // Get form data
+            const userId = document.getElementById('userId').value;
+            const plantId = document.getElementById('plantId').value;
+            const plantingDate = document.getElementById('plantingDate').value;
+            const growthStatus = document.getElementById('growthStatus').value;
+            const season = document.getElementById('season').value;
+            const locationSpecific = document.getElementById('locationSpecific').value;
+
+            // Create a new row
+            const table = document.getElementById('userPlantsTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+
+            // Insert cells
+            const userIdCell = newRow.insertCell(0);
+            const plantIdCell = newRow.insertCell(1);
+            const plantingDateCell = newRow.insertCell(2);
+            const growthStatusCell = newRow.insertCell(3);
+            const seasonCell = newRow.insertCell(4);
+            const locationSpecificCell = newRow.insertCell(5);
+
+            // Fill the cells
+            userIdCell.innerHTML = userId;
+            plantIdCell.innerHTML = plantId;
+            plantingDateCell.innerHTML = plantingDate;
+            growthStatusCell.innerHTML = growthStatus;
+            seasonCell.innerHTML = season;
+            locationSpecificCell.innerHTML = locationSpecific;
+
+            // Clear the form
+            document.getElementById('plantForm').reset();
+        });
+    </script>
+
+</body>
+</html>

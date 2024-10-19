@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Plant Page</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <header>
+        <h1>🌿 Plant Care Information 🌿</h1>
+    </header>
+
+    <div class="container">
+        <!-- Central Plant Image -->
+        <div class="plant-container">
+            <img src="Plant.png" alt="Plant Sketch" class="plant-img" onclick="openPopup()">
+
+            <!-- Animated Points Around the Plant -->
+            <div class="point top-left">🌼 Season: Spring-Summer</div>
+            <div class="point top-right">☀️ Sunlight: Full Sun/Partial Shade</div>
+            <div class="point bottom-left">🌱 Soil: Light & Well-drained</div>
+            <div class="point bottom-right">💧 Water: Regular, Not Soggy</div>
+            <div class="point center-top">🌡️ Temperature: 20°C to 30°C</div>
+        </div>
+
+        <!-- Steps Below the Plant -->
+        <div class="steps">
+            <h2>🌿 Plantation Steps:</h2>
+            <ol>
+                <li>Pick a sunny or partly shady spot.</li>
+                <li>Plant the bulb 3-4 inches deep in loose soil.</li>
+                <li>Water regularly to keep the soil slightly moist.</li>
+                <li>Spread mulch around the plant to keep the soil cool and moist.</li>
+                <li>Feed with fertilizer every 2-3 months.</li>
+                <li>Cut dead leaves and flowers to keep the plant healthy.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Interactive Popup for Detailed Uses -->
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            <div class="box">
+                <h2>🌸 Medicinal Uses</h2>
+                <p>- Helps fight infections</p>
+                <p>- Calming and relaxing scent</p>
+                <h3>Other Uses</h3>
+                <p>- Adds beauty to gardens and bouquets</p>
+                <p>- Attracts bees and other pollinators</p>
+            </div>
+            <div class="box">
+                <h2>💊 Additional Uses</h2>
+                <p>- Heals wounds and cuts</p>
+                <p>- Remedy for snake bites and insect stings</p>
+                <p>- Helps relieve headaches</p>
+                <h3>How to Use</h3>
+                <p>- Extract juice and apply on wounds</p>
+                <p>- Crush and place on sore spots</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptt.js"></script>
+</body>
+</html>
